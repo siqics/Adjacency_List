@@ -1,0 +1,54 @@
+Writeup
+
+Siqi Wen   CS163
+
+
+Cycle:
+
+A road trip planner — I want to take a road trip, starting from my house, go visit some places, then come back to my house. But I won’t visit the places (that I passed) twice, I only visit each place once. The only place I’ll visit twice on this trip is my house, at the beginning and at the end.
+ 
+
+Path:
+
+App like google maps — It would help me find the ways to go home from school. School and home may not be directly connected, I maybe pass some parks or stores on the way home, and the sequence of the ways that I take to go home from school is a path.
+
+
+
+Weighted Graph :
+
+Fuel cost app — Imagine you run an airline and you'd like to estimate fuel costs based on the routes you fly. In this example, the vertices would be airports, edges would represent flights between airports, and the edge weight would be the estimated cost of flying between those airports.
+
+
+
+Edge List:
+
+A neighborhood app — It would show a list of information of people whom my neighbors are ( who I’m adjacent to).
+
+
+ 
+Connected Graph :
+
+
+A networking app — Everyone will be a vertex, there is a path (not an edge) between every pair of people. For example, I know Jack, Jack knows Rose, I don’t know Rose directly, but I can get to know Rose through Jack.
+
+
+ 
+Complete Graph :
+
+
+A family app — Every family member will be a vertex, everyone in the family knows each other directly, (there will be an edge between every pair of people).
+
+
+
+
+The algorithm for the depth first traversal, using recursion:
+
+We have an array of LLL, every element of the array is a vertex, every node in the linear linked list is an edge, each node has info of a vertex (in the array) that is adjacent to the vertex itself (in the node).
+
+With a given vertex v, call the recursive function with the vertex v;
+Mark v as visited in the “visit flag” array;
+We will have a loop traversing the linear linked list;
+Then inside the loop, check the “visit flag” to see if we have visited a specific vertex or not;
+If there’s any unvisited vertex u that is adjacent to v, call the recursive function with the next vertex that the current vertex is adjacent to, (which is u). 
+ 
+ 
